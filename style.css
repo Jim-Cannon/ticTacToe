@@ -1,0 +1,134 @@
+body {
+  background: #000;
+  color: #fff;
+  padding: 25px;
+  font-family: sans-serif;
+  text-align:center;
+  box-sizing: border-box;
+  font-size:26px;
+}
+  /*-----------------------------------------User message and scoreboard--------------------------------------------------*/
+#user-message{
+  height: 25px;
+}
+#scoreboard{
+  display:flex;
+  justify-content:center;
+  margin: 0 auto;
+}
+#user-score, #computer-score{
+  border:1px solid white;
+  margin: 20px;
+}
+#computer-score h3, #user-score h3{
+  margin-bottom: 0px;
+}
+#actual-user-score, #actual-computer-score{
+  font-size: 50px;
+}
+
+  /*-------------------------------------------Gameboard-----------------------------------------------------------------*/
+#gameboard{
+  display:grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  margin: 25px auto;
+  width:700px;;
+  height:700px;
+}
+.gamesquare{
+  border: 1px solid white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:100px;
+}
+#square-1{
+  border-top:none;
+  border-left:none;
+}
+#square-2{
+  border-top:none;
+}
+#square-3{
+  border-top:none;
+  border-right:none;  
+}
+#square-4{
+  border-left:none;
+}
+#square-6{
+  border-right:none;
+}
+#square-7{
+  border-bottom:none;
+  border-left:none;
+}
+#square-8{
+  border-bottom:none;
+}
+#square-9{
+  border-right:none;
+  border-bottom:none;
+}
+  
+  /*-------------------------------Reset Button----------------------------------------------------*/
+button{
+  background-color:purple;
+  padding:25px;
+  font-size:24px;
+  border-radius:5px;
+  height:100px;
+  width:200px;
+  color:white;
+  margin-top: 50px;
+}
+
+/*---------------------------------------Form Elements------------------------------------------------*/
+form input{
+  height:2rem;
+  width:2rem;
+  margin: 10px auto;
+}
+
+/*----------------------------------Media Queries----------------------------------------------------*/
+
+@media screen and (min-width: 320px) and (max-width:400px) {
+  #gameboard{
+    height:300px;
+    width:300px;
+  }
+}
+
+@media screen  and (max-width:576px) {
+  
+}
+
+@media screen and (min-width: 768px) and (max-width:991px) {
+  
+}
+
+
+@media screen and (min-width: 992px) and (max-width:1199px) {
+
+}
+@media screen and (min-width: 1400px) {
+  #user-score{
+    position:relative;
+    top: 285px;;
+    right:450px;
+  }
+  #computer-score{
+    position:relative;
+    top: 285px;;
+    left:450px;
+  }
+  #gameboard{
+    position:relative;
+    bottom:200px;
+  }
+
+  form, button{
+    position:relative;
+    bottom:150px;
+  }
+}

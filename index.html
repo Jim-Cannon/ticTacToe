@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tic Tac Toe Challenge</title>
+        <meta charset="UTF-8">
+        <link href="./style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Tic Tac Toe Challenge</h1>
+        </header>
+        <main>
+            <h4 id="user-message"></h4>
+            <div id="scoreboard">
+                 <div id="user-score">
+                    <h3>Your Score</h3>
+                    <hr>
+                    <span id="actual-user-score"></span>
+                </div>
+                <div id="computer-score">
+                    <h3>Computer Score</h3>
+                    <hr>
+                    <span id="actual-computer-score"></span>
+                </div>
+            </div>
+            <div id="gameboard">
+                <div id="square-1" class="gamesquare"></div>
+                <div id="square-2" class="gamesquare"></div>
+                <div id="square-3" class="gamesquare"></div>
+                <div id="square-4" class="gamesquare"></div>
+                <div id="square-5" class="gamesquare"></div>
+                <div id="square-6" class="gamesquare"></div>
+                <div id="square-7" class="gamesquare"></div>
+                <div id="square-8" class="gamesquare"></div>
+                <div id="square-9" class="gamesquare"></div>
+            </div>
+            <form>
+                <h3>Difficulty Level</h3>
+                <input id="easy" name="difficulty" type="radio" value="easy">
+                <label for="easy">Easy</label>
+                <br>
+                <input id="normal" name="difficulty" type="radio" value="normal" checked>
+                <label for="normal">Normal</label>
+                <br>
+                <input id="hard" name="difficulty" type="radio" value="hard">
+                <label for="hard">Hard</label>
+                <br>
+                <input id="actually-impossible" name="difficulty" type="radio" value="actually-impossible">
+                <label for="actually-impossible">Actually Impossible</label>
+                <br>
+                
+            </form>
+            <button id="reset-button">Reset</button>
+        </main>
+        
+        <script src="./ticTacToe.js"></script>
+    </body>
+</html>
