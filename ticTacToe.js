@@ -293,9 +293,9 @@ function firstAvailableSquare() {
 //takes easy turn for the computer, first 1-2 moves are random
 function takeEasyTurn() {
    if(turnCount < 4) {
-      let randomSquare = 'square-'+ Math.floor(Math.random()*10);
+      let randomSquare = 'square-'+ (Math.floor(Math.random()*9)+1);
       while(document.getElementById(randomSquare).innerHTML) {
-          randomSquare= 'square-'+ Math.floor(Math.random()*10);
+          randomSquare= 'square-'+ (Math.floor(Math.random()*9)+1);
       }
       addComputerLetter(randomSquare);
       turnCount++;
@@ -308,7 +308,18 @@ function takeEasyTurn() {
 
 //takes a normal turn for the computer
 function takeNormalTurn() {
-
+    let humanErrorProbability = Math.floor(Math.random()*10);
+    if(humanErrorProbability < 7) {
+        takeHardTurn();
+    } else if(humanErrorProbability >= 7) {
+      let randomSquare = 'square-'+ (Math.floor(Math.random()*9) + 1);
+      while(document.getElementById(randomSquare).innerHTML) {
+        randomSquare= 'square-'+ (Math.floor(Math.random()*9) + 1);
+      }
+      addComputerLetter(randomSquare);
+      isGameFinished();
+      turnCount++;
+    }
 }
 
 //takes a hard turn for the computer,user can only win as x, and there's only two moves that win
